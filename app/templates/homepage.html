@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="primary-container">
+        <p>Homepage</p>
+
+        <button type="button" class="btn">-</button>
+        <button type="button" class="btn">=</button>
+        <button type="button" class="btn">+</button>
+
+        <div class="container" id="container">
+            <p>
+                This is the to test the font change buttons. <br>
+                (-) smaller <br>
+                (+) larger <br>
+                (=) preset size
+            </p>
+        </div>
+        {% comment %} <input type="range" min="10" max="100" id="slider" value="40" /> {% endcomment %}
+
+    </div>
+{% endblock content %}
