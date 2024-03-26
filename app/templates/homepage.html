@@ -1,13 +1,5 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <div class="primary-container">
         <p>Homepage</p>
 
@@ -26,8 +18,4 @@
         {% comment %} <input type="range" min="10" max="100" id="slider" value="40" /> {% endcomment %}
 
     </div>
-    
-
-    <script src="{% static "btnscript.js" %}"></script>
-</body>
-</html>
+{% endblock content %}
