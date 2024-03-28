@@ -1,0 +1,7 @@
+{
+  "css.validate": false,
+  "prettier.printWidth": 80,
+  "cSpell.words": [
+    "ecommerce"
+  ]
+}
