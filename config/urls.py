@@ -15,10 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from xml.etree.ElementInclude import include
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from app import views as app_views
 from users import views as user_views
+from dashboard import views as admin_views
 from django.contrib.auth import views as auth_views
 from app.admin import Natalie_site
 
@@ -35,11 +37,10 @@ urlpatterns = [
         user_views.log_out,
         name="logout",
     ),
+    path(
+        "dashboard/",
+        admin_views.dashboard,
+        name="dashboard",
+    ),
     path("admin/", Natalie_site.urls),
 ]
-# shows website title in the index
-admin.site.index_title = "Natalie Turner Therapy"
-# changes header Title in the admin
-admin.site.site_header = "Natalie Turner's Admin"
-# changes tab title
-admin.site.site_title = "Admin"
