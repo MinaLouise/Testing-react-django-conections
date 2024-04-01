@@ -17,7 +17,7 @@ Including another URLconf
 
 from xml.etree.ElementInclude import include
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from app import views as app_views
 from users import views as user_views
 from dashboard import views as admin_views
@@ -36,11 +36,6 @@ urlpatterns = [
         "logout/",
         user_views.log_out,
         name="logout",
-    ),
-    path(
-        "dashboard/",
-        admin_views.dashboard,
-        name="dashboard",
     ),
     path("admin/", Natalie_site.urls),
 ]
